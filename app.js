@@ -7,6 +7,7 @@ const helmet = require("helmet");
 const errorHandler = require('./error/errorHandler');
 const errorResponse = require('./error/errorResponse');
 const posts = require('./routes/posts/post');
+const { DEFAULT_ENCODING } = require('crypto');
 
 
 const app = express();
