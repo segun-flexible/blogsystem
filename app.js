@@ -39,5 +39,12 @@ app.use('/api/v1',posts)
 // catch 404 and forward to error handler
 app.use(errorHandler);
 
+let PORT;
 
-app.listen(8000,()=>console.log("Server Started"))
+if (process.env.NODE_ENV === "production") {
+  PORT = process.env.PORT
+} else {
+  PORT = 8000
+}
+
+app.listen(PORT)
